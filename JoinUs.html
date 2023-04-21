@@ -1,0 +1,151 @@
+<html>
+<head>
+	<title>HeathForever Join Us </title>
+	<style>
+		body {
+			background-image: url(./image/signup2.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: left;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+        header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+		}
+
+		header h1 {
+			margin: 10;
+        }
+        nav a {
+			color: #fff;
+			margin-right: 20px;
+			text-decoration: none;
+		}
+
+		nav a:hover {
+			text-decoration: underline;
+		}
+
+		main {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 10px;
+		}
+
+		section {
+			margin-bottom: 40px;
+		}
+        
+		form {
+			background-color: rgba(255, 255, 255, 0.8);
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			margin: 100px auto;
+			max-width: 500px;
+			padding: 40px;
+		}
+
+		h1 {
+			font-size: 32px;
+			font-weight: bold;
+			margin: 0 0 20px;
+			text-align: left;
+		}
+
+		input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="date"], select {
+			border: none;
+			border-radius: 5px;
+			display: block;
+			font-size: 16px;
+			margin-bottom: 20px;
+			padding: 10px;
+			width: 100%;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			border: none;
+			border-radius: 5px;
+			color: #fff;
+			cursor: pointer;
+			font-size: 16px;
+			padding: 10px;
+			width: 100%;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+
+		.row::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+
+		.col {
+		  float: left;
+		  width: 50%;
+		  
+		}
+        footer {
+	    background-color: whitesmoke;
+	    padding: 1rem;
+	    text-align: center;
+	    font-size: 0.8rem;
+	    margin-top: 2rem;
+        }
+
+	</style>
+</head>
+<body>
+    <header>
+        <h1>JOIN US</h1>
+		<nav>
+			<a href="index.html">HOME</a>
+            <a href="Health_podcast.html">PODCAST</a>
+            <a href="Healthy Recipes.html">RECIPES</a>
+            <a href="healthy_blogs.html">BLOGS</a>
+            <a href="Aboutus.html">ABOUT US</a> 
+            <a href=#"JoinUs.html">JOIN US</a>
+		</nav>
+    </header>
+	<form>
+		<h1>Sign Up</h1>
+		<div class="row">
+			<div class="col">
+				<input type="text" name="firstname" placeholder="First Name" required>
+			</div>
+			<div class="col">
+				<input type="text" name="lastname" placeholder="Last Name" required>
+			</div>
+		</div>
+		<input type="tel" name="phone" placeholder="Phone Number" required>
+		<input type="date" name="dob" placeholder="Date of Birth" required>
+		<select name="gender" required>
+			<option value="" disabled selected>Gender</option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+		</select>
+		<input type="text" name="address" placeholder="Email" required>
+        <input type="text" name="username" placeholder="Username" required>
+		<input type="password" name="password" placeholder="Password" required>
+		<input type="submit" value="Sign Up">
+	</form>
+    <footer>
+		<p>&copy; 2023 Health Forever. All rights reserved.</p>
+	</footer>
+	<script>
+		const form = document.querySelector('form');
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+			alert('ThanksYpu for join our team for a healty life!');
+		});
+	</script>
+</body>
+</html>

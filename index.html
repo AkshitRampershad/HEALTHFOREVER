@@ -1,0 +1,269 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Health Forever - Home</title>
+	<style>
+			
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333;
+    
+}
+
+nav {
+	background-color: #f2f2f2;
+	padding: 10px 20px;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav li {
+	margin: 0 10px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #333;
+}
+
+nav a:hover {
+	color: #0077b5;
+}
+
+header {
+	background: url('./image/healthy_food.webp') no-repeat center center fixed;
+	background-size: cover;
+	background-position: center;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+h1 {
+	font-size: 60px;
+	color: #fff;
+	text-shadow: 2px 2px #333;
+}
+
+h2 {
+	font-size: 24px;
+	color: #fff;
+	text-shadow: 2px 2px #333;
+	margin-top: 20px;
+}
+
+.promo {
+	background-color: #fff;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.promo h3 {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+.promo form {
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.promo input[type="email"] {
+padding: 10px;
+border: none;
+border-radius: 5px 0 0 5px;
+font-size: 16px;
+}
+
+.promo button {
+background-color: #0077b5;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 0 5px 5px 0;
+font-size: 16px;
+cursor: pointer;
+}
+
+.featured {
+background-color: #f2f2f2;
+padding: 50px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+.featured h3 {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+.recipe {
+margin-bottom: 50px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.recipe img {
+width: 100%;
+max-width: 400px;
+height: auto;
+margin-bottom: 20px;
+}
+
+.recipe h4 {
+font-size: 24px;
+margin-bottom: 10px;
+}
+
+.recipe p {
+margin-bottom: 20px;
+}
+
+.recipe a {
+background-color: #0077b5;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+text-decoration: none;
+}
+
+.recipe a:hover {
+background-color: #005f8b;
+}
+
+footer {
+background-color: #333;
+color: #fff;
+padding: 20px;
+text-align: center;
+}
+		/* Add responsive styles here */
+		@media only screen and (max-width: 768px) {
+			/* Adjust navigation menu for small screens */
+			nav {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			nav ul {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			nav li {
+				margin-bottom: 10px;
+			}
+
+			nav a {
+				padding: 10px;
+			}
+
+			/* Adjust header for small screens */
+			header {
+				text-align: center;
+			}
+
+			header h1 {
+				font-size: 2.5rem;
+			}
+
+			header h2 {
+				font-size: 1.5rem;
+			}
+
+			/* Adjust featured section for small screens */
+			.featured {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.recipe {
+				margin-bottom: 20px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="Health_podcast.html">Podcast</a></li>
+			<li><a href="Healthy Recipes.html">Recipes</a></li>
+			<li><a href="healthy_blogs.html">Blogs</a></li>
+			<li><a href="Aboutus.html">About Us</a></li>
+			<li><a href="JoinUs.html">Join Us</a></li>
+		</ul>
+	</nav>
+	<header>
+		<h1>Health Forever</h1>
+		<h2>Your ultimate guide to a healthy lifestyle</h2>
+	</header>
+	<section class="promo">
+		<h3>Join our community for exclusive health and wellness content</h3>
+		<form>
+			<input type="email" placeholder="Enter your email address">
+			<button type="submit">Subscribe</button>
+		</form>
+	</section>
+	<section class="featured">
+		<h3>Featured Recipes</h3>
+		<div class="recipe">
+			<img src="./image/oatmeal.png" alt="Recipe 1">
+			<h4>Pumpkin Oatmeal</h4>
+			<p>The health benefits of pumpkin include vitamins, antioxidants, fiber, folates, and more! Oatmeal is high in fiber and whole grains. This pumpkin oatmeal is poised to keep you full and nourished.</p>
+			<a href="Healthy Recipes.html">View Recipe</a>
+		</div>
+		<div class="recipe">
+			<h3>Featured Podcast</h3>
+			<img src="./image/podcast5.png" alt="Podcast">
+			
+			<h4>The Art of Being Well</h4>
+			<p>The Art Of Being Well is a fresh infusion of grace and lightness into wellness.</p>
+			<a href="Health_podcast.html">Listen Podcast</a>
+		</div>
+	</section>
+	<footer>
+	</footer>
+	<script>
+		const form = document.querySelector('form');
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+			alert('Thanks for subscribing!');
+		});
+	</script>
+	<div id="banner"></div>
+	<script>
+	function addBanner() {
+		var banner = document.getElementById("banner");
+		banner.innerHTML = "<img src='banner.jpg'>";
+	  } 
+	  window.addEventListener("load", addBanner);
+
+	</script>
+	
+</body>
+</html>	
+		<p>&copy; 2023 Health Forever All rights reserved.</p>
