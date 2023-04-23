@@ -3,6 +3,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Health Forever - Home</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 	<style>
 			
 body {
@@ -144,7 +145,7 @@ color: #fff;
 padding: 10px 20px;
 border: none;
 border-radius: 5px;
-font-size: 16px;
+font-size: 15px;
 text-decoration: none;
 }
 
@@ -152,12 +153,147 @@ text-decoration: none;
 background-color: #005f8b;
 }
 
-footer {
-background-color: #333;
-color: #fff;
-padding: 20px;
-text-align: center;
+
+.chatbox {
+  display: none;
+  position: fixed;
+  bottom: 100;
+  right: 200px;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: #333;
+  color: gray;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.chat-messages {
+  height: 100px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.chat-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.chat-input button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.close-button {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  background-color: #333;
+  color: #fff;
+  padding: 2% 5%;
+  text-align: auto;
+  justify-content: space-evenly;
+}
+
+.footerLeft {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+  text-align: auto;
+}
+
+.fTitle {
+  font-size: 2.5vw;
+  justify-content: center;
+  text-align: left;
+}
+
+.fList {
+  padding: 0;
+  list-style: none;
+}
+
+.fItem {
+  margin-bottom: 0px;
+  color: gray;
+  cursor: pointer;
+  padding: 1%;
+}
+
+.follow-us {
+  margin-bottom: 0px;
+}
+
+.follow-us h3 {
+  margin-bottom: 1%;
+  font-size: 2vw;
+}
+
+.follow-us ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.follow-us li {
+  margin: 0 2%;
+}
+
+.follow-us a {
+  color: #fff;
+  font-size: 2.5vw;
+  text-align: right;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-instagram {
+  color: #e4405f;
+}
+
+.fa-github {
+  color: white;
+}
+
+.fa-twitter {
+  color: #1da1f2;
+}
+
+
 		/* Add responsive styles here */
 		@media only screen and (max-width: 768px) {
 			/* Adjust navigation menu for small screens */
@@ -193,6 +329,177 @@ text-align: center;
 				font-size: 1.5rem;
 			}
 
+			@media only screen and (max-width: 600px) {
+  .chatbox {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 300px;
+    border-radius: 0;
+  }
+  
+  .chat-header {
+    border-radius: 0;
+  }
+  
+  .chat-messages {
+    height: 200px;
+  }
+  
+  .chat-input {
+    padding: 5px;
+  }
+  
+  .chat-input input {
+    padding: 5px;
+    border-radius: 0;
+    border-top: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+  
+  .chat-input button {
+    padding: 5px;
+    border-radius: 0;
+  }
+}
+
+/* Footer CSS */
+footer {
+  display: flex;
+  background-color: #333;
+  color: #fff;
+  padding: 2% 5%;
+  text-align: auto;
+  justify-content: space-evenly;
+}
+
+.footerLeft {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+  text-align: auto;
+}
+
+.fTitle {
+  font-size: 2.5vw;
+  justify-content: center;
+  text-align: left;
+}
+
+.fList {
+  padding: 0;
+  list-style: none;
+}
+
+.fItem {
+  margin-bottom: 0px;
+  color: gray;
+  cursor: pointer;
+  padding: 1%;
+}
+
+.follow-us {
+  margin-bottom: 0px;
+}
+
+.follow-us h3 {
+  margin-bottom: 1%;
+  font-size: 2vw;
+}
+
+.follow-us ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.follow-us li {
+  margin: 0 2%;
+}
+
+.follow-us a {
+  color: #fff;
+  font-size: 2.5vw;
+}
+@media only screen and (max-width: 600px) {
+  .chatbox {
+    bottom: 10px;
+    right: 10px;
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+  }
+
+  .chat-header {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .chat-messages {
+    height: 60%;
+    font-size: 14px;
+  }
+
+  .chat-input {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25%;
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .chat-input input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .footerLeft {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .fTitle {
+    font-size: 18px;
+  }
+
+  .fItem {
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 12px;
+  }
+
+  .follow-us h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .follow-us ul {
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  .follow-us li {
+    margin: 5px 0;
+  }
+
+  .follow-us a {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
 			/* Adjust featured section for small screens */
 			.featured {
 				display: flex;
@@ -220,7 +527,7 @@ text-align: center;
 	<header>
 		<h1>Health Forever</h1>
 		<h2>Your ultimate guide to a healthy lifestyle</h2>
-	</header>
+	</header>  
 	<section class="promo">
 		<h3>Join our community for exclusive health and wellness content</h3>
 		<form>
@@ -246,24 +553,119 @@ text-align: center;
 		</div>
 	</section>
 	<footer>
-	</footer>
+		    </div>
+	
+			<footer>
+				<div class="footerLeft">
+					<div>
+						<a href="Aboutus.html"> <h1 class="fTitle">About Us </h1> </a>
+						<ul class="fList">
+							<li class="fItem">Rahul Rawat</li>
+							<li class="fItem">Akshit Rampershad</li>
+							<li class="fItem">Priyam P</li>
+							<li class="fItem">Sruthi Arepalli</li>
+						</ul>
+					</div>
+					<div>
+						<h1 class="fTitle">Useful Links</h1>
+						<ul class="fList">
+							<li class="fItem">Support</li></a>
+							<li class="fItem">Refund</li></a>
+							<li class="fItem">FAQ</li></a>
+							<li class="fItem">Feedback</li></a>
+							<li class="fItem">Careers</li></a>
+						</ul>
+					</div>
+					<div>
+
+						<h1 class="fTitle">In the News</h1>
+						<ul class="fList">
+							<a href="healthy_blogs.html"><li class="fItem">Blogs</li></a>
+							
+							<a href="index.html"><li class="fItem">Fitness</li></a>
+							
+							<a href="Healthy Recipes.html"><li class="fItem">Food</li></a>
+							
+							<a href="Health_podcast.html"><li class="fItem">Podcast</li></a>
+							
+						</ul>
+					</div>
+				</div>	
+				<footer>
+					<div class="follow-us">
+					  <h3>Follow Us</h3>
+					  <ul>
+						<li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+						<li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+						<li><a href="https://github.com/AkshitRampershad/HEALTHFOREVER"><i class="fab fa-github"></i></a></li>
+						<li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+					  </ul>
+					</div>
+				  </footer>				  
+		</footer>
 	<script>
 		const form = document.querySelector('form');
 		form.addEventListener('submit', (event) => {
 			event.preventDefault();
 			alert('Thanks for subscribing!');
 		});
+		
 	</script>
 	<div id="banner"></div>
 	<script>
+
 	function addBanner() {
 		var banner = document.getElementById("banner");
-		banner.innerHTML = "<img src='banner.jpg'>";
+		banner.innerHTML = "<img src="banner">";
 	  } 
 	  window.addEventListener("load", addBanner);
+	</script>
+	<script>
+		
+		function openChat() {
+  var chatbox = document.getElementById("chatbox");
+  chatbox.style.display = "block";
+}
+
+function closeChat() {
+  var chatbox = document.getElementById("chatbox");
+  chatbox.style.display = "none";
+}
+
+function sendMessage() {
+  var input = document.querySelector(".chat-input input");
+  var message = input.value;
+  input.value = "";
+
+  var messages = document.querySelector(".chat-messages");
+  var newMessage = document.createElement("p");
+  newMessage.innerText = message;
+  messages.appendChild(newMessage);
+}
 
 	</script>
-	
+<footer>
+	<footer>
+		<p>&copy; 2023 Health Forever. All rights reserved.</p>
+		</footer>
+</footer>
+<button onclick="openChat()">Chat</button>
+
+<div id="chatbox" class="chatbox">
+  <div class="chat-header">
+    <h3>Chat</h3>
+    <button class="close-button" onclick="closeChat()">X</button>
+  </div>
+  <div class="chat-messages">
+    <p>Welcome to the chat!</p>
+  </div>
+  <div class="chat-input">
+    <input type="text" placeholder="Type your message here...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+	</footer>
 </body>
+
 </html>	
-		<p>&copy; 2023 Health Forever All rights reserved.</p>
